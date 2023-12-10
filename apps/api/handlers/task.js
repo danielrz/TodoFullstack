@@ -31,28 +31,28 @@ export const createTask = async ({name, completed}) => {
 }
 
 export const updateTask = async ({id, name, completed}) => {
+  // const command = new UpdateCommand({
+  //   TableName: "Tasks",
+  //   Item: {
+  //     id,
+  //     name,
+  //     completed,
+  //   },
+  // });
   const command = new UpdateCommand({
     TableName: "Tasks",
-    Item: {
+    Key: {
       id,
-      name,
-      completed,
     },
-  });
-  // const command1 = new UpdateCommand({
-  //   TableName: "Tasks",
-  //   Key: {
-  //     id,
-  //   },
-  //   UpdateExpression: "set #name = :name, completed = :completed",
-  //   ExpressionAttributeNames: {
-  //     "#name": "name",
-  //   },
-  //   ExpressionAttributeValues: {
-  //     ":name": name,
-  //     ":completed": completed,
-  //   },
-  // })
+    UpdateExpression: "set #name = :name, completed = :completed",
+    ExpressionAttributeNames: {
+      "#name": "name",
+    },
+    ExpressionAttributeValues: {
+      ":name": name,
+      ":completed": completed,
+    },
+  })
 
   const response = await docClient.send(command);
   return response;
