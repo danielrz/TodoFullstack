@@ -1,9 +1,11 @@
 {
-  "name": "TodoFullstack",
+  "name": "todo-fullstack",
   "private": true,
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
+    "dev:api": "turbo run dev --filter=api",
+    "dev:ui": "turbo run dev --filter=api",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
