@@ -25,7 +25,7 @@ export default function AddTaskForm({ fetchTasks }) {
   return (
     <div>
       <Typography align='center' variant='h2' paddingTop={2} paddingBottom={2}>
-        My Task List
+        My Super Task List
       </Typography>
       <div className="addTaskForm">
         <TextField variant='outlined' size='small' label="Task" value={newTask} onChange={(e) => setNewTask(e.target.value)} />
