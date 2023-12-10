@@ -2,7 +2,7 @@ import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import { DynamoDBDocument, ScanCommand, PutCommand, UpdateCommand, DeleteCommand } from "@aws-sdk/lib-dynamodb";
 import crypto from "crypto";
 
-const client = new DynamoDBClient({ region: "us-east-2" });
+const client = new DynamoDBClient({ region: "us-west-2" });
 const docClient = DynamoDBDocument.from(client);
 
 export const fetchTasks = async () => {

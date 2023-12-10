@@ -1,1 +1,1 @@
-export const API_BASE_URL = 'http://localhost:3000'
+export const API_BASE_URL = 'https://sm2rcxk2jcvjdk7cpmx43apgcy0iilbh.lambda-url.us-west-2.on.aws'

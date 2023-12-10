@@ -5,7 +5,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "dev:api": "turbo run dev --filter=api",
-    "dev:ui": "turbo run dev --filter=api",
+    "dev:ui": "turbo run dev --filter=ui",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
